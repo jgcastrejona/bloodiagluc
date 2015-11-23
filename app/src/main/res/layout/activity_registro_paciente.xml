@@ -5,14 +5,14 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.extli.bloodiagluc.RegistroUsr"
+    tools:context="com.extli.bloodiagluc.RegistroPaciente"
     android:background="#f44336">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/regString"
+        android:text="@string/regStringP"
         android:id="@+id/textView3"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/telMedico"
+        android:text="@string/edadStr"
         android:id="@+id/textView6"
         android:layout_below="@+id/textView5"
         android:paddingTop="32dp"
@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/mailMedico"
+        android:text="@string/padeStr"
         android:id="@+id/textView7"
         android:layout_below="@+id/textView6"
         android:paddingTop="32dp"
@@ -65,9 +65,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/passMedico"
+        android:text="@string/usrStr"
         android:id="@+id/textView8"
         android:layout_below="@+id/textView7"
+        android:paddingTop="32dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/passMedico"
+        android:id="@+id/textView9"
+        android:layout_below="@+id/textView8"
         android:paddingTop="32dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -76,16 +87,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button2"
-        android:layout_below="@+id/textView7"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="71dp"
         android:text="@string/registroSn"
-        android:background="#869cde"/>
+        android:background="#869cde"
+        android:layout_below="@+id/textView9"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/nameField"
+        android:id="@+id/namePaciente"
         android:layout_above="@+id/textView5"
         android:layout_alignLeft="@+id/button2"
         android:layout_alignStart="@+id/button2"
@@ -94,37 +105,49 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/addrField"
+        android:id="@+id/addrPaciente"
         android:minWidth="200dp"
-        android:layout_alignBottom="@+id/textView5"
-        android:layout_alignLeft="@+id/nameField"
-        android:layout_alignStart="@+id/nameField" />
+        android:layout_above="@+id/textView6"
+        android:layout_alignLeft="@+id/namePaciente"
+        android:layout_alignStart="@+id/namePaciente" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/phoneField"
+        android:id="@+id/agePaciente"
         android:minWidth="200dp"
         android:layout_above="@+id/textView7"
-        android:layout_alignLeft="@+id/addrField"
-        android:layout_alignStart="@+id/addrField" />
+        android:layout_alignLeft="@+id/addrPaciente"
+        android:layout_alignStart="@+id/addrPaciente" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/mailField"
+        android:id="@+id/disPaciente"
         android:minWidth="200dp"
         android:layout_alignBottom="@+id/textView7"
-        android:layout_alignLeft="@+id/phoneField"
-        android:layout_alignStart="@+id/phoneField" />
+        android:layout_alignLeft="@+id/agePaciente"
+        android:layout_alignStart="@+id/agePaciente" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/passField"
+        android:id="@+id/usrPaciente"
         android:minWidth="200dp"
-        android:layout_alignBottom="@+id/textView8"
-        android:layout_alignLeft="@+id/mailField"
-        android:layout_alignStart="@+id/mailField" />
+        android:layout_above="@+id/textView9"
+        android:layout_alignLeft="@+id/disPaciente"
+        android:layout_alignStart="@+id/disPaciente" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/passPaciente"
+        android:minWidth="200dp"
+        android:layout_alignBottom="@+id/textView9"
+        android:layout_alignLeft="@+id/usrPaciente"
+        android:layout_alignStart="@+id/usrPaciente" />
+
+
 
 </RelativeLayout>

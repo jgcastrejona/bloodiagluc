@@ -4,10 +4,16 @@
     <string name="passwrdStr">Password</string>
     <string name="loginTxt">Ingresar</string>
     <string name="regString">Registro de medico</string>
+    <string name="regStringP">Registro de paciente</string>
     <string name="nomMedico">Nombre</string>
     <string name="dirMedico">"Direccion"</string>
     <string name="telMedico">Telefono</string>
     <string name="mailMedico">"E-Mail"</string>
     <string name="passMedico">Password</string>
+    <string name="registroSn">Registrar</string>
+    <string name="title_activity_registro_paciente">RegistroPaciente</string>
+    <string name="edadStr">Edad</string>
+    <string name="padeStr">Padecimiento</string>
+    <string name="usrStr">Usuario</string>
 
 </resources>

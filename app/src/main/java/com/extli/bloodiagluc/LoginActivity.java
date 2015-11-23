@@ -24,6 +24,7 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
         Button btnLogin = (Button)findViewById(R.id.button);
         Button btnRegistro = (Button)findViewById(R.id.buttonreg);
         btnRegistro.setOnClickListener(this);
+
     }
 
     @Override
@@ -38,13 +39,13 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
                     /*Hacer cosas*/
                 switch (which) {
                     case 0:
-                        Toast.makeText(LoginActivity.this, "Opcion 1", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(LoginActivity.this, "Opcion 1", Toast.LENGTH_SHORT).show();
                         Intent changeToMedico = new Intent(getApplicationContext(), RegistroUsr.class);
                         startActivity(changeToMedico);
                         break;
                     case 1:
-                        Toast.makeText(LoginActivity.this, "Opcion 2", Toast.LENGTH_SHORT).show();
-                        Intent changeToPaciente = new Intent(getApplicationContext(), RegistroUsr.class);
+                        //Toast.makeText(LoginActivity.this, "Opcion 2", Toast.LENGTH_SHORT).show();
+                        Intent changeToPaciente = new Intent(getApplicationContext(), RegistroPaciente.class);
                         startActivity(changeToPaciente);
                         break;
 
@@ -53,5 +54,9 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
         });
         AlertDialog alerta = diagRegister.create();
         alerta.show();
+    }
+
+    public void loginClick(View v){
+        Toast.makeText(LoginActivity.this, "Soy otro click", Toast.LENGTH_SHORT).show();
     }
 }
