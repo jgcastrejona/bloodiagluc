@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">BloodiaGluc</string>
+    <string name="usuarioStr">Usuario</string>
+    <string name="passwrdStr">Password</string>
+    <string name="loginTxt">Ingresar</string>
+    <string name="regString">Registro de medico</string>
+    <string name="nomMedico">Nombre</string>
+    <string name="dirMedico">"Direccion"</string>
+    <string name="telMedico">Telefono</string>
+    <string name="mailMedico">"E-Mail"</string>
+    <string name="passMedico">Password</string>
+
+</resources>
