@@ -86,7 +86,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
+        android:id="@+id/btnRegMedico"
         android:layout_marginTop="71dp"
         android:text="@string/registroSn"
         android:background="#869cde"
@@ -98,9 +98,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/namePaciente"
         android:layout_above="@+id/textView5"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2"
-        android:minWidth="200dp"/>
+        android:layout_alignLeft="@+id/btnRegMedico"
+        android:layout_alignStart="@+id/btnRegMedico"
+        android:minWidth="200dp"
+        />
 
     <EditText
         android:layout_width="wrap_content"
@@ -146,7 +147,8 @@
         android:minWidth="200dp"
         android:layout_alignBottom="@+id/textView9"
         android:layout_alignLeft="@+id/usrPaciente"
-        android:layout_alignStart="@+id/usrPaciente" />
+        android:layout_alignStart="@+id/usrPaciente"
+        android:password="true" />
 
 
 

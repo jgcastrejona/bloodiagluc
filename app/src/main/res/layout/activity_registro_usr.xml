@@ -75,7 +75,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
+        android:id="@+id/btnRegMedico"
         android:layout_below="@+id/textView7"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="110dp"
@@ -87,8 +87,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/nameField"
         android:layout_above="@+id/textView5"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2"
+        android:layout_alignLeft="@+id/btnRegMedico"
+        android:layout_alignStart="@+id/btnRegMedico"
         android:minWidth="200dp"/>
 
     <EditText

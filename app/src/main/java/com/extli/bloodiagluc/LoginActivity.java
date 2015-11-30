@@ -14,20 +14,46 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity implements OnClickListener {
 
+    LoginDataBaseAdapter dbAdapter;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        /*Abre el adaptador*/
+        dbAdapter = new LoginDataBaseAdapter(this);
+        dbAdapter.open();
         /* Declaracion de los elementos para operar sobre la interfaz*/
-        EditText textoUsuario = (EditText)findViewById(R.id.txtUsr);
-        EditText textoPasswrd = (EditText)findViewById(R.id.txtPasswd);
+        final EditText textoUsuario = (EditText)findViewById(R.id.txtUsr);
+        final EditText textoPasswrd = (EditText)findViewById(R.id.txtPasswd);
         Button btnLogin = (Button)findViewById(R.id.button);
         Button btnRegistro = (Button)findViewById(R.id.buttonreg);
+        /*Listeners*/
         btnRegistro.setOnClickListener(this);
+
+        btnLogin.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(LoginActivity.this, "Click!", Toast.LENGTH_SHORT).show();
+                String userName = textoUsuario.getText().toString();
+                String password = textoPasswrd.getText().toString();
+                String storedPassword = dbAdapter.getSinlgeEntry(userName);
+                if(password.equals(storedPassword)){
+                    Toast.makeText(LoginActivity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
+                    Intent passMain = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(passMain);
+                    finish();
+                }
+                else{
+                    Toast.makeText(LoginActivity.this, "Verifica los datos", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
     }
 
-    @Override
+    @Override  /*Esto muestra la seleccion de registro*/
     public void onClick(View v){
         final CharSequence[] items = {"Medico", "Paciente"};
         AlertDialog.Builder diagRegister = new AlertDialog.Builder(this);
@@ -56,7 +82,9 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
         alerta.show();
     }
 
-    public void loginClick(View v){
-        Toast.makeText(LoginActivity.this, "Soy otro click", Toast.LENGTH_SHORT).show();
+    protected  void onDestroy(){
+        super.onDestroy();
+        dbAdapter.close();
     }
+
 }
